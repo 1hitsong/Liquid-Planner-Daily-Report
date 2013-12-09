@@ -1,0 +1,23 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "images/icon.png",
+      "default_popup": "popup.html"
+   },
+   "description": "Get your LiquidPlanner Tasks in Google Chrome",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCnBVZNpt17QcqgDmdKAii5oh9O3ayUFRETRnKhOLbYdTKDWKiPof1FFddtQeUMx1507Ke7gbXovGcRnU3bQxJU8I6HbBkoObCW8qjtjnLWUEGnl2Lcp+7VOH8pRbF/efIsLirKufmqNjYe1woCJg672G20/IEEeVelHQUj7vFcQIDAQAB",
+   "manifest_version": 3,
+   "name": "LiquidPlanner Extension for Chrome",
+   "options_page": "options.html",
+   "permissions": [ "https://*.liquidplanner.com/", "https://*.liquidplannerlab.com/", "notifications" ],
+   "version": "3",
+   "web_accessible_resources": [ "images/icon-48.png" ]
+}

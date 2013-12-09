@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>LiquidPlanner Options</title>
+<link rel="stylesheet" href="/css/style.css" type="text/css" charset="utf-8">
+<script src='/lib/jquery-1.8.3-min.js'></script>
+<script src='/js/liquid_planner.js'></script>
+<script src='/js/options.js'></script>
+
+</head>
+<body id='options'>
+<div id='loading' style='display:none;'>loading</div>
+
+<h1>LiquidPlanner Options</h1>
+<form>
+  <div class='option'>
+    <label>Use Workspace: <select id="workspaces"></select></label>
+    <p class='info'>
+      This workspace will be used to list tasks on the LiquidPlanner menu (<img src='/images/icon.png'/>)
+    </p>
+  </div>
+
+  <br/>
+  <a href='#' id='showAdvancedOptions'>Advanced options...</a>
+  <div id='advancedOptions' style='display: none'>
+    <p class='info'>
+      And by advanced, we really mean options that should work fine the way they are.
+    </p>
+    
+    <fieldset>
+      <legend>Comments</legend>
+      <div class='option'>
+        <label>Show <input type='text' id="commentCount"/> comments</label>
+      </div>
+      <div class='option'>
+        <label><input type='checkbox' id="showAllComments">Show comments for all users</label>
+      </div>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Tasks</legend>
+      <div class='option'>
+        <label>Show <input type='text' id="pendingCount"/> upcoming items</label>
+      </div>
+      <div class='option'>
+        <label>Show <input type='text' id="doneCount"/> done items</label>
+      </div>
+    </fieldset>
+    
+    <br/>
+    <div class='option'>
+      <a id='resetOptions' href='options.html'>Reset to defaults</a>
+    </div>
+  </div>
+</form>
+<div id='message' class='info'></div>
+<div id='error'   class='error'></div>
+</body>
+</html>

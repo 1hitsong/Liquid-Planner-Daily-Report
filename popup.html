@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>LiquidPlanner Popup</title>
+<link rel="stylesheet" href="/css/style.css" type="text/css" charset="utf-8">
+<script src='/lib/jquery-1.8.3-min.js'></script>
+<script src='/js/liquid_planner.js'></script>
+<script src='/js/popup.js'></script>
+
+
+</head>
+<body id='popup'>  
+  <div id='loading'><img src="/images/ajax-loader.gif"></div>
+  <div id='message' style='display:none;'></div>
+  <div id='error'   style='display:none;'></div>
+  <div id="filter">
+   <fieldset>
+    <legend>Filter by Team</legend>
+	<a id="filterDesign" class="button">Design Team</a>
+	<a id="filterProgramming" class="button">Programming Team</a>
+	<a id="filterEmail" class="button">Email Team</a>
+	</fieldset>
+  </div>
+  
+  
+  <!-- The following are templates used to render Tasks and Comments -->
+  <div style='display: none' id='templates'>
+	<li class="project">
+		<a class='menu_item' target='_liquid_planner' href=''>
+		  <span class='name'>{name}</span>
+		  <span class='percentComplete'>{percentComplete}</span>
+		  <span class='estCompletion'>{estCompletion}</span>
+		</a>
+		<div class="timeLog">
+		  <div class='info'>
+				<span class='estimate'></span>
+				<span class='promise'></span>
+			  </div>
+		</div>
+	</li>
+	<li class="folder" style="margin-left:10px;">
+		<a class='menu_item' target='_liquid_planner' href=''>
+		  <span class='name'>{name}</span>
+		</a>
+	</li>	
+	<li class="task" style="margin-left:20px;">
+		<a class='menu_item' target='_liquid_planner' href=''>
+		  <span class='name'>{name}</span>
+		</a>
+	</li>
+    
+    <a class='comment menu_item' target='_liquid_planner' href=''>
+      <span class='author'></span>
+	  <div class='text'>{comment}</div>
+      <div class='info'>
+           <span class='taskname'></span>
+      </div>
+    </a>
+    
+  </div>
+</body>
+</html>
