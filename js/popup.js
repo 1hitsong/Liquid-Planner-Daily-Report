@@ -42,6 +42,7 @@ function loadTree(obj){
 		
 		fragments.push('</ul>'); // close </ul>
 	}
+
 	recurse(obj);
 	$("body").append( fragments.join('') );    // return results
 	
@@ -69,6 +70,7 @@ function loadTree(obj){
 		
 		return false;
 	});
+
 }
 
 function formatDisplay(){
@@ -113,6 +115,28 @@ function showLoginRequest(){
 }
 
 $(document).ready(function(){
+
+	$('#showYesterday').click(function(){
+	 	$("body ul").remove();
+
+	 	var d1=$('input#date').val();
+
+	 	LiquidPlanner.newTimesheet = resource(':host/:api_path/workspaces/:space_id/timesheet_entries?start_date=' + d1 + '&amp;end_date=' + d1);
+
+		LiquidPlanner.treeitems({
+		  success: function(items){
+			loadTree(items);
+			LiquidPlanner.newTimesheet({
+			  success:  function(timeitems){
+				loadTime(timeitems);
+				formatDisplay();
+			  }
+			});
+		  }
+		});
+
+	  return false;
+	});
 	
   // Register a global Ajax error handler.
   // If Chrome receives a 401 response, it will not display the standard
@@ -156,10 +180,7 @@ $(document).ready(function(){
 			});
 		  }
 		});
-	  }  
-	
-	
-	
+	  }
 
-		
+	  $('input#date').Zebra_DatePicker();
 });

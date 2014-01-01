@@ -3,6 +3,11 @@
 <title>LiquidPlanner Popup</title>
 <link rel="stylesheet" href="/css/style.css" type="text/css" charset="utf-8">
 <script src='/lib/jquery-1.8.3-min.js'></script>
+
+<!-- jQuery Date Picker -->
+<link rel="stylesheet" media="screen" type="text/css" href="/lib/datepicker/css/bootstrap.css" />
+<script type="text/javascript" src="/lib/datepicker/javascript/zebra_datepicker.js"></script>
+
 <script src='/js/liquid_planner.js'></script>
 <script src='/js/popup.js'></script>
 
@@ -17,7 +22,9 @@
     <legend>Filter by Team</legend>
 	<a id="filterDesign" class="button">Design Team</a>
 	<a id="filterProgramming" class="button">Programming Team</a>
-	<a id="filterEmail" class="button">Email Team</a>
+	<a id="filterEmail" class="button">Email Team</a> <br />
+	<input id="date" name="date" type="text" class="date" />
+	<a id="showYesterday" class="button">Submit</a>
 	</fieldset>
   </div>
   

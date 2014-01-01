@@ -132,6 +132,9 @@ overflow-x: hidden;
 	width: 100px;
 }
 
+.hide { display: none; }
+.date { height: 20px; display: none; }
+
 .button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
