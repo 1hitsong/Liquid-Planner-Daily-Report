@@ -37,6 +37,7 @@
 
 .Zebra_DatePicker,
 .Zebra_DatePicker .dp_header .dp_hover,
+.Zebra_DatePicker td.dp_current,
 .Zebra_DatePicker td.dp_selected,
 .Zebra_DatePicker .dp_footer .dp_hover,
 .Zebra_DatePicker td.dp_hover               { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px }
@@ -57,7 +58,7 @@
 .Zebra_DatePicker .dp_daypicker th              { font-weight: bold }
 .Zebra_DatePicker td.dp_not_in_month            { color: #DEDEDE; cursor: default }
 .Zebra_DatePicker td.dp_not_in_month_selectable { }
-.Zebra_DatePicker td.dp_weekend                 { }
+.Zebra_DatePicker td.dp_weekend                 { background: #e7e7e7; }
 .Zebra_DatePicker td.dp_weekend_disabled        { color: #DEDEDE; cursor: default }
 .Zebra_DatePicker td.dp_selected                { background: #039; color: #FFF !important }
 .Zebra_DatePicker td.dp_week_number             { cursor: text; font-weight: bold }
@@ -76,10 +77,10 @@
 
 /* = SOME MORE GLOBALS (MUST BE LAST IN ORDER TO OVERWRITE PREVIOUS PROPERTIES)
 ----------------------------------------------------------------------------------------------------------------------*/
-.Zebra_DatePicker td.dp_current             { color: #3A87AD }
+.Zebra_DatePicker td.dp_current             { background: #3A87AD; color: #fff; }
 .Zebra_DatePicker td.dp_disabled_current    { color: #3A87AD }
 .Zebra_DatePicker td.dp_disabled            { color: #DEDEDE; cursor: default }
-.Zebra_DatePicker td.dp_hover               { background: #DEDEDE }
+.Zebra_DatePicker td.dp_hover               { background: #DEDEDE; color: #333!important; }
 
 /* = ICON
 ----------------------------------------------------------------------------------------------------------------------*/
@@ -88,4 +89,4 @@ button.Zebra_DatePicker_Icon_Disabled       { background-image: url('calendar-di
 
 /* don't set vertical margins! */
 button.Zebra_DatePicker_Icon                { margin: 0 0 0 3px }
-button.Zebra_DatePicker_Icon_Inside         { margin: 0 3px 0 0 }
+button.Zebra_DatePicker_Icon_Inside         { margin: 6px 0 }

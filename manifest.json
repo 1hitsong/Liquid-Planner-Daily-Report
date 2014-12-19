@@ -1,12 +1,9 @@
 {
-   "background": {
-      "page": "background.html"
-   },
    "browser_action": {
       "default_icon": "images/icon.png",
       "default_popup": "popup.html"
    },
-   "description": "Get your LiquidPlanner Tasks in Google Chrome",
+   "description": "Create a daily activity report from LiquidPlanner.",
    "icons": {
       "128": "images/icon-128.png",
       "16": "images/icon.png",

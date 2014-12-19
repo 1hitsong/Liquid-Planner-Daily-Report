@@ -1,0 +1,17 @@
+{
+  "name": "Liquid Planner Daily Report",
+  "version": "0.1.0",
+  "authors": [
+    "Psipato <patrick@powerserve.net>"
+  ],
+  "description": "Chrome extension to generate daily report from Liquid Planner.",
+  "keywords": [
+    "chrome",
+    "extension",
+    "liquid",
+    "planner"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.powerserve.net",
+  "private": true
+}
