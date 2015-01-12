@@ -3,12 +3,16 @@ function loadTree(obj){
     var fragments = [];
     var element = "";
     var percentComplete,estCompleteDate,today;
+    var itemassignments = [];
 
     function recurse(item){
+
         fragments.push('<ul>');
         
         $.each(item.children, function(key, val) {
             if(val.type!="Inbox" && val.type!="Event" && val.name!="Events"){
+
+                itemassignments = [];
 
                 // Calculate % Complete
                 percentComplete = Math.round((val.work/(val.work + val.high_effort_remaining))*100);
@@ -19,7 +23,13 @@ function loadTree(obj){
                 estCompleteDate = (today.getMonth()+1) + "/" + today.getDate() + "/" + today.getFullYear();
                 estCompleteDate = estCompleteDate.match(/[^T]*/);
 
-                element = '<li data-id="' + val.id + '" data-type="' + val.type + '" data-owner_id="' + val.owner_id + '">' + val.name;
+                $.each(val.assignments, function(key2, val2) {
+                   itemassignments.push(val2.person_id);
+                });
+
+
+
+                element = '<li data-id="' + val.id + '" data-type="' + val.type + '" data-owner_id="' + itemassignments.join() + '">' + val.name;
                 
                 if(val.is_done == false){
                     if(val.type == 'Project'){
@@ -56,7 +66,7 @@ function loadTree(obj){
             $('li').show();
         } else {
             $('li').hide();
-            $('li[data-type="Project"][data-owner_id="' + $(this).attr('rel') + '"]').each(function(){
+            $('li[data-type="Project"][data-owner_id*="' + $(this).attr('rel') + '"]').each(function(){
                 $(this).find('li[data-type="Task"]').show().parents().show();
             });
         }
